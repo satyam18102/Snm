@@ -1,0 +1,171 @@
+
+.main{
+    height: 140rem;
+    background-color: #f2f3f7;
+    margin: 0;
+    padding: 2rem 4rem;
+}
+.con{
+    display: flex;
+    background-color: #ffffff;
+}.img{
+    width: 40%;
+    height: 39rem;
+    padding: 3rem 0 0 0;
+    border-right: #000000 2px solid;
+}
+.img img{
+    width: 95%;
+    height: 100%;
+}
+.desc{
+    margin-left: 4rem;
+    margin-top: 2rem;
+    height: 44rem;
+}
+.desc h1{
+    font-weight: 500;
+    line-height: 1rem !important;
+}
+.product-price{
+    margin-top: 2rem;
+    display: flex;
+}
+.price{
+    /* background-color: aqua; */
+    font-family: "Lato";
+}
+.price-unit h2{
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #1b85fd;
+}
+.price-contact{
+    /* background-color: #b12323; */
+    text-align: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+.price-contact button{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: #b12323;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.product-detail h2{
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.product-detail li{
+    line-height: 1rem;
+    display: flex;
+    width: 100%;
+    border-bottom: #e6e6e6 2px solid;
+}
+.product-detail{
+    width: 36rem;
+}
+.a{
+    width: 50%;
+}
+.product-detail h3{
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.b{
+    text-align: left;
+    height: 100%;
+    width: 50%;
+}
+.conth button{
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    height: 3rem;
+    width: 28rem;
+    border-radius: 0.6rem;
+    border: 2px solid black;
+    font-size: 1.5rem;
+    font-family: "Lato";
+}
+.conth button:hover{
+    background-color: #b12323;
+    color: #f2f3f7;
+}
+.more-details{
+    margin-top: 2rem;
+    background-color: #ffffff;
+    height: 75rem;
+    padding: 0.8rem 1.5rem 0 1.5rem;
+}
+.price{
+    margin-bottom: 2.5rem;
+}
+.price h2{
+    color: #000000;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #cfcfcf;
+    padding-bottom: 0.9rem;
+    font-weight: 400;
+}
+.asx h2{
+    margin-top: 2rem;
+    padding-top: 4rem;
+}
+ul,ol,li{
+    list-style: none;
+}
+.price-detail{
+    display: block;
+    width: 100%;
+}
+.price ul li{
+    width: 50%;
+    font-size: 1.1rem;
+    /* font-family: "Lato"; */
+    float: left;
+    padding: 0 0 1.6rem 0;
+}
+.price ul li label{
+    display: inline-block;
+    width: 47%;
+    opacity: 0.7;
+    font-family: "Raleway";
+}
+.price h3{
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+.img img{
+    border: 1px solid #efefef;
+}
+
+
+.product-details{
+    height: 100%;
+}
+.product-details table{
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "Lato";
+    line-height: 1.8rem;
+}
+.product-details td,th{ 
+    width: 50%;
+    text-align: left;
+    border: 1px solid black;
+    padding-left: 1rem;
+}
+
+
+
+
+

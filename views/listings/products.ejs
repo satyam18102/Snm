@@ -1,0 +1,17 @@
+<% layout("/layouts/boilerplate") %>
+    <link rel="stylesheet" href="/css/products.css">
+
+
+<div class="main row ">
+    <% for(listing of allListings){ %>
+    <a href="/home/detail/<%= listing._id %>">
+        <div class="container">
+            <img src="/assets/sample.png">
+            <div class="card-detail">
+             <h3><%= listing.name %></h3> 
+               
+            </div>
+        </div>
+    </a>
+    <% } %>
+</div>

@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand logo" href="/home"><img src="/assets/icon.png">S N Machinery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/home">Home</a>
+          <a class="nav-link" href="/home/about">About Us</a>
+          <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle drp-down" data-bs-toggle="dropdown" aria-expanded="false">Products</button>
+            <ul class="dropdown-menu">
+              <%for(let listing of allListings){ %>
+                <li><a class="dropdown-item" href="/home/detail/<%= listing._id %>"><%= listing.name %></a></li>
+              <% } %>
+            </ul>
+          </li>
+          <!-- <a class="nav-link" href="/add">Products</a> -->
+          <a class="nav-link" href="/home/contact">Contact Us</a>
+          </div>
+          <div class="navbar-nav ms-auto">
+          <% if(currUser){ %>
+            <form action="/admin/logout">
+              <button class="btn btn-success ">Logout</button>
+            </form>
+            <form action="/admin/add">
+              <button class="btn btn-success add-btn">Add Product</button>
+            </form>
+            <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- <i class="fa-regular fa-compass"></i> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="nav">
+    <div class="logo"><a href="http://localhost:3200/home">
+        <img src="/assets/icon.png"></a>
+        <a href="http://localhost:3200/home" class="l-text"> S N Machinery </a>
+    </div>
+    <div class="option">
+        <ul class="ul" >
+            <li class="menu"><a href="http://localhost:3200/home">Home</a></li>
+            <li class="menu"><a href="http://localhost:3200/about">About Us</a></li>
+            <li class="menu"><a href="http://localhost:3200/products">Products</a></li>
+            <li class="menu"><a href="http://localhost:3200/contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="search hide">
+            <form action="Error404.html" class="search-form">
+            <input class="search-box" type="text" placeholder="search" name="search">
+            <input name="submit" type="image" src="/assets/search-png.png" class="search-icon">
+        </form>
+    </div>
+</div> -->

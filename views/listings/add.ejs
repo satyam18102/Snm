@@ -1,0 +1,156 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h1>Add a new Product</h1>
+    <form method="POST" action="/admin/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="title" class="form-label">Prduct name</label>
+        <input name="listing[name]" placeholder="Enter Name" type="text" class="form-control" required>
+        <div class="valid-feedback">Name looks good</div>
+        <div class="invalid-feedback">Please enter a valid Name</div>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input name="listing[image]" type="file" class="form-control">
+    </div>
+    <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="grade" class="form-label">Grade</label>
+            <select class="form-select" aria-label="Default select example" name="listing[grade]" required>
+                <option selected>Grade</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Semi-Automatic">Semi-Automatic</option>
+                <option value="Manual">Manual</option>
+            </select>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="material" class="form-label">Material</label>
+            <input name="listing[material]" placeholder="Enter material type" class="form-control" required>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="computerized" class="form-label">Computerized</label>
+            <select class="form-select" aria-label="Default select example" name="listing[computerized]">
+                <option selected>Computerized</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+    </div>
+    
+<div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="control" class="form-label">Control System</label>
+        <input name="listing[control]" placeholder="Control System" class="form-control" required>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="Warranty" class="form-label">Warranty</label>
+        <select class="form-select" aria-label="Default select example" name="listing[warranty]" required>
+            <option selected>Warranty</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input name="listing[price]" placeholder="Enter Price" class="form-control" required>
+    </div>
+</div>
+<div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="terms" class="form-label">Payment Terms</label>
+        <select class="form-select" aria-label="Default select example" name="listing[terms]">
+            <option selected>Payment Terms</option>
+            <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+            <option value="Prepaid">Prepaid</option>
+        </select>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="control" class="form-label">Supply Ability</label>
+        <input name="listing[ability]" placeholder="Supply Ability per month" class="form-control" required>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="time" class="form-label">Delivery time</label>
+        <input name="listing[time]" placeholder="Enter Delivery Time" class="form-control" required>
+    </div>
+</div>
+<div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="market" class="form-label">Main Domestic Market</label>
+        <input name="listing[market]" placeholder="Main Domestic Market" class="form-control" required>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="usage" class="form-label">Usage</label>
+        <input name="listing[usage]" placeholder="Enter Usage" class="form-control" required>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="surface" class="form-label">Surface Treatment</label>
+        <input name="listing[surface]" placeholder="Surface Treatment" class="form-control" required>
+    </div>
+</div>
+<div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="terms" class="form-label">Phase</label>
+        <select class="form-select" aria-label="Default select example" name="listing[phase]">
+            <option selected>Select Phase</option>
+            <option value="Three Phase">Three Phase</option>
+            <option value="Two Phase">Two Phase</option>
+        </select>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="terms" class="form-label">Frequency</label>
+        <select class="form-select" aria-label="Default select example" name="listing[frequency]">
+            <option selected>Select Frequency</option>
+            <option value="50 Hz">50 Hz</option>
+            <option value="60 Hz">60 Hz</option>
+        </select>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="terms" class="form-label">Warranty</label>
+        <select class="form-select" aria-label="Default select example" name="listing[warrant]">
+            <option selected>Warranty</option>
+            <option value="1 Year">1 Year</option>
+            <option value="2 Year">2 Year</option>
+            <option value="3 Year">3 Year</option>
+            <option value="4 Year">4 Year</option>
+            <option value="5 Year">5 Year</option>
+        </select>
+    </div>
+</div>
+ <div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="control" class="form-label">Power consumption</label>
+        <input name="listing[power]" placeholder="Power consumption" class="form-control" required>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="control" class="form-label">Machine weight</label>
+        <input name="listing[weight]" placeholder="Enter weight" class="form-control" required>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="time" class="form-label">Production capacity</label>
+        <input name="listing[capacity]" placeholder="Enter Production capacity" class="form-control" required>
+    </div>
+</div>
+<div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="terms" class="form-label">Automation Grade</label>
+        <select class="form-select" aria-label="Default select example" name="listing[automation]">
+            <option selected>Automation Grade</option>
+            <option value="Automatic">Automatic</option>
+            <option value="Semi-Automatic">Semi-Automatic</option>
+            <option value="Manual">Manual</option>
+        </select>
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="control" class="form-label">Cup Size</label>
+        <input name="listing[size]" placeholder="Enter size" class="form-control" required>
+    </div>
+</div>
+<div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea name="listing[description]" class="form-control desc" required></textarea>
+</div>
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+    </form>
+</div>
+</div>

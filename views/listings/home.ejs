@@ -1,0 +1,36 @@
+<% layout("/layouts/boilerplate") %>
+
+<link rel="stylesheet" href="/css/home.css">
+<div class="main">
+    <div class="img-bar">
+        <img src="/assets/ag.png" class="img-1">
+    </div>
+    <div class="details">
+        <img src="/assets/det-img.png">
+        <p class="det">At S N Machinery, we have always prioritized providing the highest quality machines to all of our clients. Since our establishment in the year 2020, we have established ourselves as a highly reliable supplier and trader of a diverse range of high-end machinery. Among the various products we provide are Semi Automatic Non Woven Bag Making Machine, Edible Cup Making Machine, Pedal Agarbatti Making Machine, and many more. The superior quality, optimum performance and reasonable prices of our machines have enabled us to significantly increase our market presence. Along with offering high-quality products, we make every effort to interact with our clients in an open and honest manner. We additionally provide after sale service for installation and maintenance.</p>
+    </div>
+    <div class="other">
+        <div class="details-btn">
+            <p class="pop">Most Popular Products</p>
+            <form action="/home/products">
+                <button type="submit" class=" btn all-pro">Veiw All Products</button>
+            </form>
+        </div> 
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1 card-con">
+            <% for(listing of allListings){ %>
+                <a href="/home/detail/<%= listing._id %>" class="listing-link">
+                    <div class="card col listing-card">
+                        <img src="/assets/sample.png" class="card-img-top mt-3" alt="listing_image" style="height: 20rem;">
+                        <div class="card-img-overlay"></div>
+            <div class="card-body">
+                <h4 class="card-text">
+                    <%= listing.name %>
+                </h4>
+            </div>
+                    </div>
+                </a>
+            <% } %>
+        </div>               
+    </div>
+</div>
+<script src="/js/test.js"></script>

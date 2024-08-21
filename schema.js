@@ -1,0 +1,29 @@
+const Joi = require('joi');
+
+module.exports.listingSchema=Joi.object({
+    listing:Joi.object({
+        name:Joi.string().required(),
+        image:Joi.string().allow("",null),
+        grade:Joi.string().required(),
+        material:Joi.string().required(),
+        computerized:Joi.string().required(),
+        control:Joi.string().required(),
+        warranty:Joi.string().required(),
+        price:Joi.number().required().min(0),
+        terms:Joi.string().required(),
+        ability:Joi.string().required(),
+        time:Joi.string().required(),
+        market:Joi.string().required(),
+        usage:Joi.string().required(),
+        surface:Joi.string().required(),
+        phase:Joi.string().required(),
+        frequency:Joi.string().required(),
+        warrant:Joi.string().required(),
+        power:Joi.string().required(),
+        weight:Joi.string().required(),
+        capacity:Joi.string().required(),
+        automation:Joi.string().required(),
+        size:Joi.string().required(),
+        description:Joi.string().required(),
+    }).required()
+});

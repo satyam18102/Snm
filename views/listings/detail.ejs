@@ -1,0 +1,184 @@
+<% layout("/layouts/boilerplate") %>
+
+    <link rel="stylesheet" href="/css/details.css">
+
+    <div class="main">
+        <div class="con">
+            <div class="img">
+                <img src="<%=listing.image.url%>">
+            </div>
+            <div class="desc">
+                <div class="heading">
+                    <!-- <h1>Paper Dona Making Machine</h1> -->
+                     <h1><%= listing.name %></h1>
+                </div>
+                <div class="product-price">
+                    <div class="price-unit">
+                        <h2>&#8377;<%= listing.price.toLocaleString("en-IN") %>/Unit</h2>
+                    </div>
+                    <div class="price-contact">
+                        <form action="/home/contact">
+                            <button>Contact Us</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <h2>Product Details:</h2>
+                    <ul>
+                        <li>
+                            <h3 class="a">Grade</h3>
+                            <h3 class="b"><%= listing.grade %></h3>
+                        </li>
+                        <li>
+                            <h3 class="a">Material</h3>
+                            <h3 class="b"><%= listing.material %></h3>
+                        </li>
+                        <li>
+                            <h3 class="a">Computerized</h3>
+                            <h3 class="b"><%= listing.computerized %></h3>
+                        </li>
+                        <li>
+                            <h3 class="a">Control System</h3>
+                            <h3 class="b"><%= listing.control %></h3>
+                        </li>
+                        <li>
+                            <h3 class="a">Warranty</h3>
+                            <h3 class="b"><%= listing.warranty %></h3>
+                        </li>
+                    </ul>
+                </div>
+                <% if(currUser){ %>
+                <div class="conth">
+                        <form action="/admin/listings/<%= listing._id %>/edit">
+                            <button>Edit Product</button>
+                        </form>
+                        <form method="POSt" action="/admin/listings/<%= listing._id %>?_method=DELETE">
+                            <button>Delete</button>
+                        </form>
+                </div>
+                <% } else{ %>
+                    <div class="conth">
+                        <form action="https://pages.razorpay.com/pl_Nsr6fhyxgvaZfM/view">
+                            <button>Pay Now</button>
+                        </form>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        <div class="more-details">
+            <div class="price">
+                <h2>Paper Dona Making Machine Price And Quantity</h2>
+                <ul class="price-detail">
+                    <li>
+                        <label>Price</label>
+                        <span>750000 INR/Unit</span>
+                    </li>
+                    <li>
+                        <label>Minimum Order Quantity</label>
+                        <span>5 Unit</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="price">
+                <h2>Paper Dona Making Machine Product Specifications</h2>
+                <ul class="price-detail">
+                    <li>
+                        <label>Warranty</label>
+                        <span><%= listing.warranty %></span>
+                    </li>
+                    <li>
+                        <label>Control System</label>
+                        <span><%= listing.control %></span>
+                    </li>
+                    <li>
+                        <label>Grade</label>
+                        <span><%= listing.grade %></span>
+                    </li>
+                    <li>
+                        <label>Material</label>
+                        <span><%= listing.material %></span>
+                    </li>
+                    <li>
+                        <label>Computerized</label>
+                        <span><%= listing.computerized %></span>
+                    </li>
+                    <li>
+                        <label></label>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="price asx">
+                <h2>Paper Dona Making Machine Trade Information</h2>
+                <ul class="price-detail">
+                    <li>
+                        <label>Payment Terms</label>
+                        <span><%= listing.terms %></span>
+                    </li>
+                    <li>
+                        <label>Supply Ability</label>
+                        <span><%= listing.ability %> Unit per month</span>
+                    </li>
+                    <li>
+                        <label>Delivery Time</label>
+                        <span><%= listing.time %> Days</span>
+                    </li>
+                    <li>
+                        <label>Main Domestic Market</label>
+                        <span><%= listing.market %></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="price">
+                <h2>Product Description</h2>
+                <!-- <h3>This Paper Dona Making Machine is a semi-automatic machine that is designed to make paper donas. The machine is made of high-quality stainless steel that makes it extremely durable and long-lasting. It comes with a frequency speed control system that allows you to adjust the speed of the machine according to your needs. This machine is perfect for commercial use and can be used for making paper donas of different sizes and shapes. This machine is easy to use and maintain, and comes with a warranty that ensures its quality and performance. It is perfect for businesses that are looking for an efficient and reliable way to make paper donas. This machine is designed to make a large number of donas in a short period of time, making it a great choice for businesses with high demand for donas. -->
+                <!-- </h3> -->
+                 <h3><%= listing.description %></h3>
+            </div>
+            <div class="product-details">
+                <h2>Product details:</h2>
+                <table>
+                    <tr>
+                        <td>Usage</td>
+                        <td><%= listing.usage %></td>
+                    </tr>
+                    <tr>
+                        <td>Surface Treatment</td>
+                        <td><%= listing.surface %></td>
+                    </tr>
+                    <tr>
+                        <td>Phase</td>
+                        <td><%= listing.phase %></td>
+                    </tr>
+                    <tr>
+                        <td>Frequency</td>
+                        <td><%= listing.frequency %></td>
+                    </tr>
+                    <tr>
+                        <td>Warranty</td>
+                        <td><%= listing.warrant %></td>
+                    </tr>
+                    <tr>
+                        <td>Power Consumption</td>
+                        <td><%= listing.power %></td>
+                    </tr>
+                    <tr>
+                        <td>Machine Weight</td>
+                        <td><%= listing.weight %></td>
+                    </tr>
+                    <tr>
+                        <td>Production Capacity</td>
+                        <td><%= listing.capacity %></td>
+                    </tr>
+                    <tr>
+                        <td>Automation Grade</td>
+                        <td><%= listing.automation %></td>
+                    </tr>
+                    <tr>
+                        <td>Cup Size</td>
+                        <td><%= listing.size %></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
